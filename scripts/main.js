@@ -1,6 +1,5 @@
 ;(function($){
     $(function (){
-
         //Menu
         $('#hamburger').click(function() {
             var clicks = $(this).data('clicks');
@@ -35,14 +34,6 @@
             }]
         });
         //
-        //map menu
-        $('.header__btn').on('click', function () {
-            $('.modal__contact, .dark__background').css('display','flex');
-        });
-        $('.modal__contact__close').on('click', function (){
-            $('.modal__contact, .dark__background').hide();
-        })
-
         //smooth scrolling
         $("body").on('click', '[href*="#"]', function(e){
             var fixed_offset = 100;
@@ -58,7 +49,6 @@
                 $('.dark__background').hide();
             }
         });
-
 
 
 

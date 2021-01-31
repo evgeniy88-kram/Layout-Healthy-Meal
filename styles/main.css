@@ -15,6 +15,7 @@ header {
 header h1 {
   font-weight: 300;
   font-size: 42px;
+  cursor: pointer;
 }
 header h1 span {
   color: #75B534;
@@ -24,6 +25,9 @@ header nav a {
   color: #1C1A2C;
   margin-right: 30px;
   font-size: 20px;
+}
+header nav a:hover {
+  color: #75B534;
 }
 
 .banner {
@@ -96,8 +100,24 @@ header nav a {
   left: 200px;
   top: 50px;
 }
-.set__grid__area1 div:nth-child(3) img {
-  margin: auto;
+.set__grid__area1 div:nth-child(3) svg {
+  fill: #ffffff;
+  position: absolute;
+}
+.set__grid__area1 div:nth-child(3) svg:nth-child(1) {
+  left: 250px;
+}
+.set__grid__area1 div:nth-child(3) svg:nth-child(2) {
+  top: 250px;
+  left: 250px;
+}
+.set__grid__area1 div:nth-child(3) svg:nth-child(3) {
+  top: 0;
+  left: 0;
+}
+.set__grid__area1 div:nth-child(3) svg:nth-child(3) {
+  top: 270px;
+  left: 0;
 }
 .set__grid__area1 div:nth-child(4) {
   grid-area: a3;
@@ -169,6 +189,10 @@ header nav a {
   justify-content: center;
   margin: 0 auto;
   border-radius: 30px;
+  cursor: pointer;
+}
+.benefit__btn:hover {
+  box-shadow: 0 0 5px 5px #75B534;
 }
 
 .dish {
@@ -201,6 +225,9 @@ header nav a {
   border-radius: 30px;
   cursor: pointer;
 }
+.dish div:hover {
+  box-shadow: 0 0 5px 5px #ffffff;
+}
 .dish div a {
   color: #1C1A2C;
   text-decoration: none;
@@ -227,6 +254,7 @@ header nav a {
 .recipes__grid p {
   font-size: 19px;
   text-align: center;
+  margin: 30px 0;
 }
 .recipes__grid div div {
   display: flex;
@@ -242,9 +270,12 @@ header nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 60px auto 0;
+  margin: 100px auto 0;
   border-radius: 30px;
   cursor: pointer;
+}
+.recipes__btn:hover {
+  box-shadow: 0 0 5px 5px #75B534;
 }
 
 .reviews {
@@ -266,6 +297,7 @@ header nav a {
   width: 320px;
   height: 200px;
   margin: 0 50px;
+  cursor: pointer;
 }
 .reviews__slick p {
   font-size: 20px;
@@ -294,9 +326,22 @@ header nav a {
   grid-template-columns: repeat(3, 1fr);
   gap: 80px;
 }
-.shop__grid p {
+.shop__grid div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.shop__grid a {
+  text-decoration: none;
+  color: #1C1A2C;
   font-size: 24px;
   text-align: center;
+  cursor: pointer;
+  margin-top: 50px;
+}
+.shop__grid a:hover {
+  color: #75B534;
 }
 
 footer {
@@ -326,6 +371,7 @@ footer form input {
   border: none;
   border-radius: 30px;
   padding: 0 0 0 20px;
+  outline: none;
 }
 footer form input::placeholder {
   color: #1C1A2C;
@@ -340,6 +386,7 @@ footer form div {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 footer p {
   text-align: center;

@@ -15,10 +15,10 @@
     <nav>
         <a href="javascript:void(0);">Главная</a>
         <a href="javascript:void(0);">О нас</a>
-        <a href="">Рецепты</a>
-        <a href="">Магазин</a>
-        <a href="">Отзывы</a>
-        <a href="">Ингредиенты</a>
+        <a href="#ing">Ингредиенты</a>
+        <a href="#recipes">Рецепты</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#shop">Магазин</a>
     </nav>
 </header>
 <main>
@@ -26,7 +26,7 @@
         <article id="about">Живи здорово и вкусно<br>вместе с нами</article>
     </section>
     <section class="set">
-        <article>Набор здорового питания</article>
+        <article id="ing">Набор здорового питания</article>
         <div class="set__grid">
             <div class="set__grid__area1">
                 <div>
@@ -38,6 +38,18 @@
                     <p>Ешьте больше фруктов разноцветных и разных. Они укрепляют иммунную систему, которая помогает оргвнизму бороться с болезнями</p>
                 </div>
                 <div>
+                    <svg xmlns="http://www.w3.org/2000/svg"  preserveAspectRatio="xMidYMid" width="114" height="60" viewBox="0 0 114 60">
+                        <path d="M53.614,18.347 C34.548,27.224 12.793,48.068 5.511,55.355 C5.568,55.451 5.633,55.540 5.681,55.644 C6.378,57.157 5.734,58.957 4.243,59.664 C2.752,60.371 0.978,59.719 0.281,58.206 C-0.416,56.693 0.228,54.893 1.719,54.185 C2.494,53.818 3.342,53.824 4.079,54.121 C10.652,47.494 32.834,25.981 52.773,16.521 C74.394,6.263 113.000,-0.011 113.000,-0.011 C113.000,-0.011 113.841,1.816 113.841,1.816 C113.841,1.816 75.307,8.247 53.614,18.347 Z" fill-rule="evenodd"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"  preserveAspectRatio="xMidYMid" width="114" height="60" viewBox="0 0 114 60">
+                        <path d="M113.155,60.010 C113.155,60.010 74.497,53.730 52.847,43.460 C32.881,33.989 10.670,12.451 4.088,5.817 C3.350,6.114 2.500,6.121 1.724,5.752 C0.231,5.044 -0.413,3.242 0.285,1.728 C0.983,0.213 2.759,-0.441 4.252,0.267 C5.745,0.975 6.390,2.778 5.692,4.292 C5.644,4.396 5.579,4.486 5.522,4.581 C12.814,11.877 34.598,32.745 53.690,41.631 C75.412,51.743 113.997,58.182 113.997,58.182 C113.997,58.182 113.155,60.010 113.155,60.010 Z"  fill-rule="evenodd"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"  preserveAspectRatio="xMidYMid" width="112" height="48" viewBox="0 0 112 48">
+                        <path d="M109.619,5.716 C108.783,6.107 107.864,6.066 107.088,5.705 C100.598,11.438 80.075,28.860 60.333,38.092 C38.597,48.257 0.848,47.542 0.848,47.542 C0.848,47.542 0.002,45.732 0.002,45.732 C0.002,45.732 37.679,46.291 59.487,36.283 C78.393,27.607 98.602,10.613 105.699,4.376 C105.680,4.340 105.654,4.309 105.636,4.271 C104.935,2.772 105.582,0.988 107.081,0.287 C108.580,-0.414 110.363,0.234 111.064,1.733 C111.765,3.232 111.118,5.015 109.619,5.716 Z"  fill-rule="evenodd"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg"  preserveAspectRatio="xMidYMid" width="112" height="48" viewBox="0 0 112 48">
+                        <path d="M111.213,45.850 C110.512,47.351 108.726,47.999 107.225,47.297 C105.724,46.596 105.076,44.810 105.778,43.309 C105.796,43.271 105.822,43.240 105.841,43.204 C98.734,36.960 78.498,19.947 59.567,11.261 C37.729,1.242 0.002,1.801 0.002,1.801 C0.002,1.801 0.850,-0.011 0.850,-0.011 C0.850,-0.011 38.649,-0.727 60.414,9.449 C80.183,18.692 100.733,36.134 107.232,41.874 C108.009,41.511 108.929,41.470 109.766,41.862 C111.267,42.564 111.915,44.349 111.213,45.850 Z"  fill-rule="evenodd"/>
+                    </svg>
                     <img src="img/set_img1.png" alt="set-img1">
                 </div>
                 <div>
@@ -99,7 +111,7 @@
         </div>
     </section>
     <section class="recipes">
-        <article>Рецепты</article>
+        <article id="recipes">Рецепты</article>
         <div class="recipes__grid">
             <div>
                 <img src="img/rec_img1.jpg" alt="rec_img1">
@@ -177,7 +189,7 @@
         <div class="recipes__btn">Все рецепты</div>
     </section>
     <section class="reviews">
-        <article>Отзывы</article>
+        <article id="reviews">Отзывы</article>
         <div class="reviews__slick">
             <div class="reviews__slick__slide">
                 <p>“Благодаря вам поменяла рацион питания своей семьи. Огромное спасибо!!!”</p>
@@ -206,19 +218,19 @@
         </div>
     </section>
     <section class="shop">
-    <article>Магазин</article>
+    <article id="shop">Магазин</article>
         <div class="shop__grid">
             <div>
                 <img src="img/goods_img1.png" alt="goods_img1">
-                <p>Выпечка</p>
+                <a href="javascript:void(0);">Выпечка</a>
             </div>
             <div>
                 <img src="img/goods_img2.png" alt="goods_img2">
-                <p>Соленья</p>
+                <a href="javascript:void(0);">Соленья</a>
             </div>
             <div>
                 <img src="img/goods_img3.png" alt="goods_img3">
-                <p>Специи</p>
+                <a href="javascript:void(0);">Специи</a>
             </div>
         </div>
     </section>

@@ -22,6 +22,7 @@ header {
   h1 {
     font-weight: 300;
     font-size: 42px;
+    cursor: pointer;
     span {
       color: $secColor;
     }
@@ -32,6 +33,9 @@ header {
       color: $firstColor;
       margin-right: 30px;
       font-size: 20px;
+    }
+    a:hover {
+      color: $secColor;
     }
   }
 }
@@ -104,8 +108,24 @@ header {
         position: absolute;
         left: 200px;
         top: 50px;
-        img {
-          margin: auto;
+        svg {
+          fill: $thirdColor;
+          position: absolute;
+        }
+        svg:nth-child(1) {
+          left: 250px;
+        }
+        svg:nth-child(2) {
+          top: 250px;
+          left: 250px;
+        }
+        svg:nth-child(3) {
+          top: 0;
+          left: 0;
+        }
+        svg:nth-child(3) {
+          top: 270px;
+          left: 0;
         }
       }
       div:nth-child(4) {
@@ -177,6 +197,10 @@ header {
     @include flexCentrCentr;
     margin: 0 auto;
     border-radius: 30px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 5px 5px $secColor;
+    }
   }
 }
 .dish {
@@ -205,6 +229,9 @@ header {
     margin: 0 auto;
     border-radius: 30px;
     cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 5px 5px $thirdColor;
+    }
     a {
       color: $firstColor;
       text-decoration: none;
@@ -230,6 +257,7 @@ header {
     p {
       font-size: 19px;
       text-align: center;
+      margin: 30px 0;
     }
     div div {
       display: flex;
@@ -244,9 +272,12 @@ header {
     font-size: 20px;
     color: $thirdColor;
     @include flexCentrCentr;
-    margin: 60px auto 0;
+    margin: 100px auto 0;
     border-radius: 30px;
     cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 5px 5px $secColor;
+    }
   }
 }
 .reviews {
@@ -266,6 +297,7 @@ header {
       width: 320px;
       height: 200px;
       margin: 0 50px;
+      cursor: pointer;
     }
     p {
       font-size: 20px;
@@ -293,9 +325,20 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 80px;
-    p {
+    div {
+      @include flexCentrCentr;
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      color: $firstColor;
       font-size: 24px;
       text-align: center;
+      cursor: pointer;
+      margin-top: 50px;
+    }
+    a:hover {
+      color: $secColor;
     }
   }
 }
@@ -324,6 +367,7 @@ footer {
       border: none;
       border-radius: 30px;
       padding: 0 0 0 20px;
+      outline: none;
       &::placeholder {
         color: $firstColor;
         font-weight: 400;
@@ -336,6 +380,7 @@ footer {
       color: $thirdColor;
       border-radius: 30px;
       @include flexCentrCentr;
+      cursor: pointer;
     }
   }
   p {
