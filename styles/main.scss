@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap');
+
+$firstColor: #1C1A2C;
+$secColor: #75B534;
+$thirdColor: #ffffff;
+@mixin flexCentrCentr () {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  margin: 0 auto !important;
+  width: 1600px;
+  box-shadow: 0 0 5px 5px #cccccc;
+  font-family: 'Comfortaa', cursive;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 170px;
+  h1 {
+    font-weight: 300;
+    font-size: 42px;
+    span {
+      color: $secColor;
+    }
+  }
+  nav {
+    a {
+      text-decoration: none;
+      color: $firstColor;
+      margin-right: 30px;
+      font-size: 20px;
+    }
+  }
+}
+.banner {
+  background: url("../img/banner_bg.jpg");
+  min-height: 600px;
+  article {
+    text-align: center;
+    padding-top: 200px;
+    color: $thirdColor;
+    margin: 0;
+    font-size: 85px;
+  }
+}
+.set {
+  background: url("../img/set_bg.jpg");
+  height: 760px;
+  article {
+    text-align: center;
+    padding-top: 85px;
+    color: $thirdColor;
+    margin: 0;
+    font-size: 60px;
+  }
+  &__grid {
+    width: 1200px;
+    margin: 60px auto 0;
+    display: grid;
+    gap: 85px 35px;
+    grid-template-areas:
+    "area1 area1 area2"
+    "area1 area1 area3";
+    grid-template-columns: 400px 400px 330px;
+    grid-template-rows: repeat(2, 1fr);
+    &__area1 {
+      grid-area: area1;
+      width: 800px;
+      display: grid;
+      grid-template-columns: 230px 240px;
+      grid-template-rows: 1fr 1fr;
+      gap: 80px 350px;
+      position: relative;
+      grid-template-areas:
+    "a1 a3"
+    "a2 a4";
+      div {
+        color: $thirdColor;
+        h2 {
+          font-size: 24px;
+          margin: 0 0 20px 0;
+          span {
+            font-size: 36px;
+          }
+        }
+        p {
+          margin: 0;
+          line-height: 22px;
+          font-size: 15px;
+        }
+      }
+      div:nth-child(1) {
+        grid-area: a1;
+        width: 220px;
+      }
+      div:nth-child(2) {
+        grid-area: a2;
+        width: 220px;
+      }
+      div:nth-child(3) {
+        position: absolute;
+        left: 200px;
+        top: 50px;
+        img {
+          margin: auto;
+        }
+      }
+      div:nth-child(4) {
+        grid-area: a3;
+        width: 240px;
+      }
+      div:nth-child(5) {
+        grid-area: a4;
+        width: 240px;
+      }
+    }
+    &__area2 {
+      grid-area: area2;
+    }
+    &__area3 {
+      grid-area: area3;
+    }
+    &__area2, &__area3 {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      width: 330px;
+      div {
+        margin-left: 20px;
+        color: $thirdColor;
+        h2 {
+          font-size: 24px;
+          margin: 15px 0 17px 0;
+        }
+        p {
+          margin: 0;
+          font-size: 15px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+.benefit {
+  height: 720px;
+  article {
+    text-align: center;
+    padding-top: 85px;
+    color: $firstColor;
+    margin: 0;
+    font-size: 60px;
+  }
+  &__grid {
+    width: 1180px;
+    margin: 65px auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 70px;
+    img {
+      margin: 0 auto;
+    }
+    p {
+      color: $firstColor;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+  &__btn {
+    width: 260px;
+    height: 60px;
+    background: $secColor;
+    color: $thirdColor;
+    font-size: 20px;
+    @include flexCentrCentr;
+    margin: 0 auto;
+    border-radius: 30px;
+  }
+}
+.dish {
+  height: 320px;
+  background: url("../img/dish_bg.jpg");
+  article {
+    text-align: center;
+    padding-top: 85px;
+    color: $thirdColor;
+    margin: 0;
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 36px;
+    color: $firstColor;
+    text-align: center;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+  div {
+    width: 260px;
+    height: 60px;
+    background: $thirdColor;
+    font-size: 20px;
+    @include flexCentrCentr;
+    margin: 0 auto;
+    border-radius: 30px;
+    cursor: pointer;
+    a {
+      color: $firstColor;
+      text-decoration: none;
+    }
+  }
+}
+.recipes {
+  height: 1460px;
+  article {
+    text-align: center;
+    padding-top: 85px;
+    color: $firstColor;
+    margin: 0;
+    font-size: 60px;
+  }
+  &__grid {
+    width: 1180px;
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 100px;
+    p {
+      font-size: 19px;
+      text-align: center;
+    }
+    div div {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  &__btn {
+    width: 260px;
+    height: 60px;
+    background: $secColor;
+    font-size: 20px;
+    color: $thirdColor;
+    @include flexCentrCentr;
+    margin: 60px auto 0;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+}
+.reviews {
+  height: 230px;
+  background: url("../img/reviews_bg.jpg");
+  article {
+    text-align: center;
+    padding-top: 15px;
+    color: $thirdColor;
+    margin: 0;
+    font-size: 60px;
+  }
+  &__slick {
+    width: 90%;
+    margin: 0 auto;
+    &__slide {
+      width: 320px;
+      height: 200px;
+      margin: 0 50px;
+    }
+    p {
+      font-size: 20px;
+    }
+    p:nth-child(1) {
+      color: $thirdColor;
+    }
+    p:nth-child(2) {
+      color: $secColor;
+    }
+  }
+}
