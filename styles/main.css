@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap");
 body {
   margin: 0 auto !important;
-  width: 1600px;
+  max-width: 1600px;
   box-shadow: 0 0 5px 5px #cccccc;
   font-family: "Comfortaa", cursive;
 }
@@ -17,6 +17,11 @@ header h1 {
   font-size: 42px;
   cursor: pointer;
 }
+@media screen and (max-width: 1500px) {
+  header h1 {
+    font-size: 36px;
+  }
+}
 header h1 span {
   color: #75B534;
 }
@@ -26,20 +31,43 @@ header nav a {
   margin-right: 30px;
   font-size: 20px;
 }
+@media screen and (max-width: 1500px) {
+  header nav a {
+    font-size: 18px;
+    margin-right: 15px;
+  }
+}
 header nav a:hover {
   color: #75B534;
 }
 
 .banner {
   background: url("../img/banner_bg.jpg");
-  min-height: 600px;
+  height: 600px;
 }
 .banner article {
   text-align: center;
   padding-top: 200px;
-  color: #ffffff;
-  margin: 0;
+  color: #75B534;
   font-size: 85px;
+}
+@media screen and (max-width: 1300px) {
+  .banner article {
+    font-size: 60px;
+    padding-top: 230px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .banner article {
+    font-size: 40px;
+    padding-top: 250px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .banner article {
+    font-size: 28px;
+    padding-top: 270px;
+  }
 }
 
 .set {
@@ -61,6 +89,12 @@ header nav a:hover {
   grid-template-areas: "area1 area1 area2" "area1 area1 area3";
   grid-template-columns: 400px 400px 330px;
   grid-template-rows: repeat(2, 1fr);
+}
+@media screen and (max-width: 1250px) {
+  .set__grid {
+    grid-template-columns: 400px 400px;
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 .set__grid__area1 {
   grid-area: area1;
@@ -156,6 +190,11 @@ header nav a:hover {
 .benefit {
   height: 720px;
 }
+@media screen and (max-width: 770px) {
+  .benefit {
+    height: 1620px;
+  }
+}
 .benefit article {
   text-align: center;
   padding-top: 85px;
@@ -163,12 +202,57 @@ header nav a:hover {
   margin: 0;
   font-size: 60px;
 }
+@media screen and (max-width: 1250px) {
+  .benefit article {
+    font-size: 40px;
+    padding-top: 45px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .benefit article {
+    font-size: 28px;
+  }
+}
 .benefit__grid {
   width: 1180px;
   margin: 65px auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 70px;
+}
+@media screen and (max-width: 1250px) {
+  .benefit__grid {
+    margin: 30px auto 0;
+    width: 700px;
+    gap: 20px 80px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "a1 a2 a3" "a4 . a5";
+  }
+  .benefit__grid div:nth-child(1) {
+    grid-area: a1;
+  }
+  .benefit__grid div:nth-child(2) {
+    grid-area: a2;
+  }
+  .benefit__grid div:nth-child(3) {
+    grid-area: a3;
+  }
+  .benefit__grid div:nth-child(4) {
+    grid-area: a4;
+  }
+  .benefit__grid div:nth-child(5) {
+    grid-area: a5;
+  }
+}
+@media screen and (max-width: 770px) {
+  .benefit__grid {
+    width: 180px;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "a1" "a2" "a3" "a4" "a5";
+  }
 }
 .benefit__grid img {
   margin: 0 auto;
@@ -191,6 +275,16 @@ header nav a:hover {
   border-radius: 30px;
   cursor: pointer;
 }
+@media screen and (max-width: 1250px) {
+  .benefit__btn {
+    margin: -180px auto 0;
+  }
+}
+@media screen and (max-width: 770px) {
+  .benefit__btn {
+    margin: 20px auto 0;
+  }
+}
 .benefit__btn:hover {
   box-shadow: 0 0 5px 5px #75B534;
 }
@@ -199,6 +293,12 @@ header nav a:hover {
   height: 320px;
   background: url("../img/dish_bg.jpg");
 }
+@media screen and (max-width: 1440px) {
+  .dish {
+    background: url("../img/dish_bg(1440).jpg") no-repeat;
+    height: 290px;
+  }
+}
 .dish article {
   text-align: center;
   padding-top: 60px;
@@ -206,12 +306,33 @@ header nav a:hover {
   margin: 0;
   font-size: 60px;
 }
+@media screen and (max-width: 1250px) {
+  .dish article {
+    font-size: 40px;
+    padding-top: 45px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .dish article {
+    font-size: 28px;
+  }
+}
 .dish h2 {
   font-size: 36px;
   color: #1C1A2C;
   text-align: center;
   font-weight: 400;
   text-decoration: underline;
+}
+@media screen and (max-width: 1250px) {
+  .dish h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .dish h2 {
+    font-size: 22px;
+  }
 }
 .dish div {
   width: 260px;
@@ -236,6 +357,11 @@ header nav a:hover {
 .recipes {
   height: 1460px;
 }
+@media screen and (max-width: 1250px) {
+  .recipes {
+    height: 2400px;
+  }
+}
 .recipes article {
   text-align: center;
   padding-top: 85px;
@@ -243,18 +369,63 @@ header nav a:hover {
   margin: 0;
   font-size: 60px;
 }
+@media screen and (max-width: 1250px) {
+  .recipes article {
+    font-size: 40px;
+    padding-top: 45px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .recipes article {
+    font-size: 28px;
+  }
+}
 .recipes__grid {
   width: 1180px;
-  margin: 70px auto;
+  margin: 50px auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 100px;
+  gap: 70px;
+}
+@media screen and (max-width: 1250px) {
+  .recipes__grid {
+    width: 550px;
+    margin: 30px auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .recipes__grid {
+    width: 240px;
+    margin: 25px auto;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
 }
 .recipes__grid p {
   font-size: 19px;
   text-align: center;
   margin: 30px 0;
+}
+@media screen and (max-width: 600px) {
+  .recipes__grid p {
+    margin: 20px 0;
+    font-size: 14px;
+  }
+}
+.recipes__grid div {
+  padding: 10px;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .recipes__grid div > img {
+    height: 150px;
+  }
+}
+.recipes__grid > div:hover {
+  box-shadow: 0 0 18px 2px #75B534;
 }
 .recipes__grid div div {
   display: flex;
@@ -270,7 +441,7 @@ header nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 100px auto 0;
+  margin: 75px auto 0;
   border-radius: 30px;
   cursor: pointer;
 }
