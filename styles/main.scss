@@ -71,8 +71,12 @@ header {
   }
 }
 .set {
-  background: url("../img/set_bg.jpg");
+  background: url("../img/set_bg.jpg") no-repeat;
+  background-size: cover;
   height: 760px;
+  @media screen and (max-width: 1250px) {
+    height: 920px;
+  }
   article {
     text-align: center;
     padding-top: 70px;
@@ -87,23 +91,24 @@ header {
       font-size: 28px;
     }
   }
-  &__grid {
+  &__content {
     width: 1200px;
     margin: 60px auto 0;
-    display: grid;
-    gap: 85px 35px;
-    grid-template-areas:
-    "area1 area1 area2"
-    "area1 area1 area3";
-    grid-template-columns: 400px 400px 330px;
-    grid-template-rows: repeat(2, 1fr);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     @media screen and (max-width: 1250px) {
-      grid-template-columns: 400px 400px;
-      grid-template-rows: repeat(3, 1fr);
+      flex-direction: column;
+      margin: 30px auto 0;
+      width: 820px;
     }
-    &__area1 {
-      grid-area: area1;
-      width: 800px;
+    @media screen and (max-width: 850px) {
+      flex-direction: column;
+      margin: 30px auto 0;
+      width: 820px;
+    }
+    &__left {
+      width: 820px;
       display: grid;
       grid-template-columns: 230px 240px;
       grid-template-rows: 1fr 1fr;
@@ -168,31 +173,42 @@ header {
         width: 240px;
       }
     }
-    &__area2 {
-      grid-area: area2;
-    }
-    &__area3 {
-      grid-area: area3;
-    }
-    &__area2, &__area3 {
+    &__right {
       display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      width: 330px;
-      div {
-        margin-left: 20px;
-        color: $thirdColor;
-        h2 {
-          font-size: 24px;
-          margin: 15px 0 17px 0;
+      flex-direction: column;
+      height: 554px;
+      @media screen and (max-width: 1250px) {
+        flex-direction: row;
+        height: 220px;
+      }
+      &--up, &--down {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 330px;
+        div {
+          margin-left: 20px;
+          color: $thirdColor;
+          h2 {
+            font-size: 24px;
+            margin: 15px 0 17px 0;
+          }
+          p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 22px;
+          }
         }
-        p {
-          margin: 0;
-          font-size: 15px;
-          line-height: 22px;
+      }
+      &--down {
+        margin-top: 100px;
+        @media screen and (max-width: 1250px) {
+          margin-top: 0;
+          margin-left: 120px;
         }
       }
     }
+
   }
 }
 .benefit {

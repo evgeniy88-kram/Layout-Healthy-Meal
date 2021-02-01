@@ -71,8 +71,14 @@ header nav a:hover {
 }
 
 .set {
-  background: url("../img/set_bg.jpg");
+  background: url("../img/set_bg.jpg") no-repeat;
+  background-size: cover;
   height: 760px;
+}
+@media screen and (max-width: 1250px) {
+  .set {
+    height: 920px;
+  }
 }
 .set article {
   text-align: center;
@@ -92,24 +98,29 @@ header nav a:hover {
     font-size: 28px;
   }
 }
-.set__grid {
+.set__content {
   width: 1200px;
   margin: 60px auto 0;
-  display: grid;
-  gap: 85px 35px;
-  grid-template-areas: "area1 area1 area2" "area1 area1 area3";
-  grid-template-columns: 400px 400px 330px;
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 @media screen and (max-width: 1250px) {
-  .set__grid {
-    grid-template-columns: 400px 400px;
-    grid-template-rows: repeat(3, 1fr);
+  .set__content {
+    flex-direction: column;
+    margin: 30px auto 0;
+    width: 820px;
   }
 }
-.set__grid__area1 {
-  grid-area: area1;
-  width: 800px;
+@media screen and (max-width: 850px) {
+  .set__content {
+    flex-direction: column;
+    margin: 30px auto 0;
+    width: 820px;
+  }
+}
+.set__content__left {
+  width: 820px;
   display: grid;
   grid-template-columns: 230px 240px;
   grid-template-rows: 1fr 1fr;
@@ -117,85 +128,99 @@ header nav a:hover {
   position: relative;
   grid-template-areas: "a1 a3" "a2 a4";
 }
-.set__grid__area1 div {
+.set__content__left div {
   color: #ffffff;
 }
-.set__grid__area1 div h2 {
+.set__content__left div h2 {
   font-size: 24px;
   margin: 0 0 20px 0;
 }
-.set__grid__area1 div h2 span {
+.set__content__left div h2 span {
   font-size: 36px;
 }
-.set__grid__area1 div p {
+.set__content__left div p {
   margin: 0;
   line-height: 22px;
   font-size: 15px;
 }
-.set__grid__area1 div:nth-child(1) {
+.set__content__left div:nth-child(1) {
   grid-area: a1;
   width: 220px;
 }
-.set__grid__area1 div:nth-child(2) {
+.set__content__left div:nth-child(2) {
   grid-area: a2;
   width: 220px;
 }
-.set__grid__area1 div:nth-child(3) {
+.set__content__left div:nth-child(3) {
   position: absolute;
   left: 200px;
   top: 50px;
 }
-.set__grid__area1 div:nth-child(3) svg {
+.set__content__left div:nth-child(3) svg {
   fill: #ffffff;
   position: absolute;
 }
-.set__grid__area1 div:nth-child(3) svg:nth-child(1) {
+.set__content__left div:nth-child(3) svg:nth-child(1) {
   left: 250px;
 }
-.set__grid__area1 div:nth-child(3) svg:nth-child(2) {
+.set__content__left div:nth-child(3) svg:nth-child(2) {
   top: 250px;
   left: 250px;
 }
-.set__grid__area1 div:nth-child(3) svg:nth-child(3) {
+.set__content__left div:nth-child(3) svg:nth-child(3) {
   top: 0;
   left: 0;
 }
-.set__grid__area1 div:nth-child(3) svg:nth-child(3) {
+.set__content__left div:nth-child(3) svg:nth-child(3) {
   top: 270px;
   left: 0;
 }
-.set__grid__area1 div:nth-child(4) {
+.set__content__left div:nth-child(4) {
   grid-area: a3;
   width: 240px;
 }
-.set__grid__area1 div:nth-child(5) {
+.set__content__left div:nth-child(5) {
   grid-area: a4;
   width: 240px;
 }
-.set__grid__area2 {
-  grid-area: area2;
+.set__content__right {
+  display: flex;
+  flex-direction: column;
+  height: 554px;
 }
-.set__grid__area3 {
-  grid-area: area3;
+@media screen and (max-width: 1250px) {
+  .set__content__right {
+    flex-direction: row;
+    height: 220px;
+  }
 }
-.set__grid__area2, .set__grid__area3 {
+.set__content__right--up, .set__content__right--down {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   width: 330px;
 }
-.set__grid__area2 div, .set__grid__area3 div {
+.set__content__right--up div, .set__content__right--down div {
   margin-left: 20px;
   color: #ffffff;
 }
-.set__grid__area2 div h2, .set__grid__area3 div h2 {
+.set__content__right--up div h2, .set__content__right--down div h2 {
   font-size: 24px;
   margin: 15px 0 17px 0;
 }
-.set__grid__area2 div p, .set__grid__area3 div p {
+.set__content__right--up div p, .set__content__right--down div p {
   margin: 0;
   font-size: 15px;
   line-height: 22px;
+}
+.set__content__right--down {
+  margin-top: 100px;
+}
+@media screen and (max-width: 1250px) {
+  .set__content__right--down {
+    margin-top: 0;
+    margin-left: 120px;
+  }
 }
 
 .benefit {
