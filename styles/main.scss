@@ -77,6 +77,15 @@ header {
   @media screen and (max-width: 1250px) {
     height: 920px;
   }
+  @media screen and (max-width: 850px) {
+    height: 740px;
+  }
+  @media screen and (max-width: 700px) {
+    height: 1180px;
+  }
+  @media screen and (max-width: 500px) {
+    height: 1030px;
+  }
   article {
     text-align: center;
     padding-top: 70px;
@@ -104,8 +113,11 @@ header {
     }
     @media screen and (max-width: 850px) {
       flex-direction: column;
+      width: 650px;
+    }
+    @media screen and (max-width: 700px) {
+      width: 240px;
       margin: 30px auto 0;
-      width: 820px;
     }
     &__left {
       width: 820px;
@@ -117,19 +129,56 @@ header {
       grid-template-areas:
     "a1 a3"
     "a2 a4";
+      @media screen and (max-width: 850px) {
+        width: 650px;
+        gap: 50px 175px;
+      }
+      @media screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+    "a1"
+    "a2"
+    "a3"
+    "a4";
+        width: 240px;
+        gap: 10px;
+      }
       div {
         color: $thirdColor;
         h2 {
           font-size: 24px;
           margin: 0 0 20px 0;
+          @media screen and (max-width: 850px) {
+            font-size: 16px;
+          }
+          @media screen and (max-width: 700px) {
+            font-size: 14px;
+            margin: 0 0 10px 0;
+          }
           span {
             font-size: 36px;
+            @media screen and (max-width: 850px) {
+              font-size: 22px;
+            }
+            @media screen and (max-width: 700px) {
+              font-size: 18px;
+            }
+            @media screen and (max-width: 500px) {
+              font-size: 16px;
+            }
           }
         }
         p {
           margin: 0;
           line-height: 22px;
           font-size: 15px;
+          @media screen and (max-width: 850px) {
+            font-size: 12px;
+          }
+          @media screen and (max-width: 500px) {
+            font-size: 10px;
+          }
         }
       }
       div:nth-child(1) {
@@ -144,24 +193,49 @@ header {
         position: absolute;
         left: 200px;
         top: 50px;
+        @media screen and (max-width: 700px) {
+        display: none;
+        }
+        img {
+          @media screen and (max-width: 850px) {
+            height: 200px;
+          }
+        }
         svg {
           fill: $thirdColor;
           position: absolute;
+          @media screen and (max-width: 850px) {
+            width: 100px;
+            height: 40px;
+          }
         }
         svg:nth-child(1) {
           left: 250px;
+          @media screen and (max-width: 850px) {
+            left: 120px;
+            top: -10px;
+          }
         }
         svg:nth-child(2) {
           top: 250px;
           left: 250px;
-        }
-        svg:nth-child(3) {
-          top: 0;
-          left: 0;
+          @media screen and (max-width: 850px) {
+            left: 120px;
+            top: 170px;
+          }
         }
         svg:nth-child(3) {
           top: 270px;
-          left: 0;
+          @media screen and (max-width: 850px) {
+            top: 170px;
+            left: -40px;
+          }
+        }
+        svg:nth-child(4) {
+          @media screen and (max-width: 850px) {
+            top: -10px;
+            left: -40px;
+          }
         }
       }
       div:nth-child(4) {
@@ -172,6 +246,32 @@ header {
         grid-area: a4;
         width: 240px;
       }
+      .mobile--img {
+        display: none;
+        background: url("../img/set_img2.png") no-repeat;
+        background-size: cover;
+        height: 100px;
+        width: 100px;
+        @media screen and (max-width: 700px) {
+          display: block;
+          position: absolute;
+        }
+      }
+      div:nth-child(6) {
+        left: 210px;
+      }
+      div:nth-child(7) {
+        top: 165px;
+        left: 210px;
+      }
+      div:nth-child(8) {
+        top: 330px;
+        left: 210px;
+      }
+      div:nth-child(9) {
+        top: 495px;
+        left: 210px;
+      }
     }
     &__right {
       display: flex;
@@ -180,6 +280,11 @@ header {
       @media screen and (max-width: 1250px) {
         flex-direction: row;
         height: 220px;
+      }
+      @media screen and (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
       }
       &--up, &--down {
         display: flex;
@@ -192,11 +297,23 @@ header {
           h2 {
             font-size: 24px;
             margin: 15px 0 17px 0;
+            @media screen and (max-width: 850px) {
+              font-size: 16px;
+            }
+            @media screen and (max-width: 500px) {
+              font-size: 14px;
+            }
           }
           p {
             margin: 0;
             font-size: 15px;
             line-height: 22px;
+            @media screen and (max-width: 850px) {
+              font-size: 12px;
+            }
+            @media screen and (max-width: 500px) {
+              font-size: 10px;
+            }
           }
         }
       }
@@ -206,9 +323,14 @@ header {
           margin-top: 0;
           margin-left: 120px;
         }
+        @media screen and (max-width: 850px) {
+          margin-left: 10px;
+        }
+        @media screen and (max-width: 700px) {
+          margin-left: 0;
+        }
       }
     }
-
   }
 }
 .benefit {
