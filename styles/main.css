@@ -289,34 +289,6 @@ header nav a:hover {
   grid-area: a4;
   width: 240px;
 }
-.set__content__left .mobile--img {
-  display: none;
-  background: url("../img/set_img2.png") no-repeat;
-  background-size: cover;
-  height: 100px;
-  width: 100px;
-}
-@media screen and (max-width: 700px) {
-  .set__content__left .mobile--img {
-    display: block;
-    position: absolute;
-  }
-}
-.set__content__left div:nth-child(6) {
-  left: 210px;
-}
-.set__content__left div:nth-child(7) {
-  top: 165px;
-  left: 210px;
-}
-.set__content__left div:nth-child(8) {
-  top: 330px;
-  left: 210px;
-}
-.set__content__left div:nth-child(9) {
-  top: 495px;
-  left: 210px;
-}
 .set__content__right {
   display: flex;
   flex-direction: column;
@@ -502,7 +474,26 @@ header nav a:hover {
 }
 @media screen and (max-width: 1440px) {
   .dish {
+    background: url("../img/dish_bg-1440.jpg") no-repeat;
     height: 290px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .dish {
+    background: url("../img/dish_bg-1024.jpg") no-repeat;
+    height: 206px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dish {
+    background: url("../img/dish_bg-768.jpg") no-repeat;
+    height: 155px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .dish {
+    background: url("../img/dish_bg-375.jpg") no-repeat;
+    height: 76px;
   }
 }
 .dish article {
@@ -512,15 +503,28 @@ header nav a:hover {
   margin: 0;
   font-size: 60px;
 }
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1440px) {
   .dish article {
     font-size: 40px;
     padding-top: 45px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
+  .dish article {
+    font-size: 36px;
+    padding-top: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
   .dish article {
     font-size: 28px;
+    padding-top: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .dish article {
+    padding-top: 5px;
+    font-size: 18px;
   }
 }
 .dish h2 {
@@ -530,14 +534,26 @@ header nav a:hover {
   font-weight: 400;
   text-decoration: underline;
 }
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1440px) {
   .dish h2 {
     font-size: 28px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
   .dish h2 {
+    margin: 15px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dish h2 {
+    margin: 10px 0;
     font-size: 22px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .dish h2 {
+    margin: 5px 0;
+    font-size: 12px;
   }
 }
 .dish div {
@@ -551,6 +567,20 @@ header nav a:hover {
   margin: 0 auto;
   border-radius: 30px;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .dish div {
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .dish div {
+    width: 100px;
+    height: 25px;
+    font-size: 10px;
+  }
 }
 .dish div:hover {
   box-shadow: 0 0 5px 5px #ffffff;

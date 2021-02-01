@@ -246,32 +246,6 @@ header {
         grid-area: a4;
         width: 240px;
       }
-      .mobile--img {
-        display: none;
-        background: url("../img/set_img2.png") no-repeat;
-        background-size: cover;
-        height: 100px;
-        width: 100px;
-        @media screen and (max-width: 700px) {
-          display: block;
-          position: absolute;
-        }
-      }
-      div:nth-child(6) {
-        left: 210px;
-      }
-      div:nth-child(7) {
-        top: 165px;
-        left: 210px;
-      }
-      div:nth-child(8) {
-        top: 330px;
-        left: 210px;
-      }
-      div:nth-child(9) {
-        top: 495px;
-        left: 210px;
-      }
     }
     &__right {
       display: flex;
@@ -429,8 +403,20 @@ header {
   height: 320px;
   background: url("../img/dish_bg.jpg");
   @media screen and (max-width: 1440px) {
-    //background: url("../img/dish_bg(1440).jpg") no-repeat;
+    background: url("../img/dish_bg-1440.jpg") no-repeat;
     height: 290px;
+  }
+  @media screen and (max-width: 1024px) {
+    background: url("../img/dish_bg-1024.jpg") no-repeat;
+    height: 206px;
+  }
+  @media screen and (max-width: 768px) {
+    background: url("../img/dish_bg-768.jpg") no-repeat;
+    height: 155px;
+  }
+  @media screen and (max-width: 375px) {
+    background: url("../img/dish_bg-375.jpg") no-repeat;
+    height: 76px;
   }
   article {
     text-align: center;
@@ -438,12 +424,21 @@ header {
     color: $thirdColor;
     margin: 0;
     font-size: 60px;
-    @media screen and (max-width: 1250px) {
+    @media screen and (max-width: 1440px) {
       font-size: 40px;
       padding-top: 45px;
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1024px) {
+      font-size: 36px;
+      padding-top: 25px;
+    }
+    @media screen and (max-width: 768px) {
       font-size: 28px;
+      padding-top: 15px;
+    }
+    @media screen and (max-width: 375px) {
+      padding-top: 5px;
+      font-size: 18px;
     }
   }
   h2 {
@@ -452,11 +447,19 @@ header {
     text-align: center;
     font-weight: 400;
     text-decoration: underline;
-    @media screen and (max-width: 1250px) {
+    @media screen and (max-width: 1440px) {
       font-size: 28px;
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1024px) {
+      margin: 15px 0;
+    }
+    @media screen and (max-width: 768px) {
+      margin: 10px 0;
       font-size: 22px;
+    }
+    @media screen and (max-width: 375px) {
+      margin: 5px 0;
+      font-size: 12px;
     }
   }
   div {
@@ -468,6 +471,16 @@ header {
     margin: 0 auto;
     border-radius: 30px;
     cursor: pointer;
+    @media screen and (max-width: 768px) {
+      width: 200px;
+      height: 50px;
+      font-size: 16px;
+    }
+    @media screen and (max-width: 375px) {
+      width: 100px;
+      height: 25px;
+      font-size: 10px;
+    }
     &:hover {
       box-shadow: 0 0 5px 5px $thirdColor;
     }
