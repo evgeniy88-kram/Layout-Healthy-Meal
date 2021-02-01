@@ -81,6 +81,17 @@ header nav a:hover {
   margin: 0;
   font-size: 60px;
 }
+@media screen and (max-width: 1250px) {
+  .set article {
+    font-size: 40px;
+    padding-top: 45px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .set article {
+    font-size: 28px;
+  }
+}
 .set__grid {
   width: 1200px;
   margin: 60px auto 0;
@@ -295,7 +306,6 @@ header nav a:hover {
 }
 @media screen and (max-width: 1440px) {
   .dish {
-    background: url("../img/dish_bg(1440).jpg") no-repeat;
     height: 290px;
   }
 }
@@ -319,7 +329,7 @@ header nav a:hover {
 }
 .dish h2 {
   font-size: 36px;
-  color: #1C1A2C;
+  color: #ffffff;
   text-align: center;
   font-weight: 400;
   text-decoration: underline;
@@ -360,6 +370,11 @@ header nav a:hover {
 @media screen and (max-width: 1250px) {
   .recipes {
     height: 2400px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .recipes {
+    height: 3100px;
   }
 }
 .recipes article {
@@ -415,22 +430,35 @@ header nav a:hover {
     font-size: 14px;
   }
 }
-.recipes__grid div {
+.recipes__grid__item {
   padding: 10px;
   cursor: pointer;
 }
-@media screen and (max-width: 600px) {
-  .recipes__grid div > img {
-    height: 150px;
-  }
-}
-.recipes__grid > div:hover {
+.recipes__grid__item:hover {
   box-shadow: 0 0 18px 2px #75B534;
 }
-.recipes__grid div div {
+@media screen and (max-width: 600px) {
+  .recipes__grid__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 600px) {
+  .recipes__grid__item > img {
+    height: 180px;
+  }
+}
+.recipes__grid__item div {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+@media screen and (max-width: 600px) {
+  .recipes__grid__item div img {
+    margin: 0 5px;
+  }
 }
 .recipes__btn {
   width: 260px;
@@ -460,6 +488,16 @@ header nav a:hover {
   margin: 0;
   font-size: 60px;
 }
+@media screen and (max-width: 1250px) {
+  .reviews article {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .reviews article {
+    font-size: 28px;
+  }
+}
 .reviews__slick {
   width: 90%;
   margin: 30px auto;
@@ -473,6 +511,11 @@ header nav a:hover {
 .reviews__slick p {
   font-size: 20px;
 }
+@media screen and (max-width: 600px) {
+  .reviews__slick p {
+    font-size: 14px;
+  }
+}
 .reviews__slick p:nth-child(1) {
   color: #ffffff;
 }
@@ -483,6 +526,11 @@ header nav a:hover {
 .shop {
   height: 600px;
 }
+@media screen and (max-width: 1000px) {
+  .shop {
+    height: 1150px;
+  }
+}
 .shop article {
   text-align: center;
   padding-top: 85px;
@@ -490,12 +538,31 @@ header nav a:hover {
   margin: 0;
   font-size: 60px;
 }
+@media screen and (max-width: 1250px) {
+  .shop article {
+    font-size: 40px;
+    padding-top: 45px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .shop article {
+    font-size: 28px;
+  }
+}
 .shop__grid {
   margin: 65px auto;
   width: 1000px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 80px;
+}
+@media screen and (max-width: 1000px) {
+  .shop__grid {
+    width: 240px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 30px auto;
+  }
 }
 .shop__grid div {
   display: flex;
@@ -510,6 +577,12 @@ header nav a:hover {
   text-align: center;
   cursor: pointer;
   margin-top: 50px;
+}
+@media screen and (max-width: 1000px) {
+  .shop__grid a {
+    margin-top: 30px;
+    font-size: 18px;
+  }
 }
 .shop__grid a:hover {
   color: #75B534;
@@ -526,6 +599,11 @@ footer article {
   margin: 0;
   font-size: 40px;
 }
+@media screen and (max-width: 750px) {
+  footer article {
+    font-size: 22px;
+  }
+}
 footer form {
   margin: 40px auto;
   width: 460px;
@@ -536,6 +614,11 @@ footer form {
   justify-content: center;
   background: #ffffff;
 }
+@media screen and (max-width: 750px) {
+  footer form {
+    width: 300px;
+  }
+}
 footer form input {
   width: 280px;
   height: 60px;
@@ -543,6 +626,12 @@ footer form input {
   border-radius: 30px;
   padding: 0 0 0 20px;
   outline: none;
+}
+@media screen and (max-width: 750px) {
+  footer form input {
+    width: 170px;
+    font-size: 12px;
+  }
 }
 footer form input::placeholder {
   color: #1C1A2C;
@@ -559,6 +648,12 @@ footer form div {
   justify-content: center;
   cursor: pointer;
 }
+@media screen and (max-width: 750px) {
+  footer form div {
+    width: 110px;
+    font-size: 12px;
+  }
+}
 footer p {
   text-align: center;
   font-size: 18px;
@@ -567,9 +662,9 @@ footer p {
   padding-top: 30px;
   margin: 0;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
   footer p {
-    font-size: 18px;
+    font-size: 12px;
   }
 }
 footer .social {
@@ -580,7 +675,7 @@ footer svg {
   fill: #75B534;
   margin: 0 20px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 750px) {
   footer svg {
     margin: 0 10px;
   }

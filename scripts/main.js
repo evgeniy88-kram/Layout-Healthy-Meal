@@ -27,10 +27,20 @@
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [{
-                breakpoint: 700,
+                breakpoint: 1250,
                 settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
                     arrows: false
                 }
+                },
+                {
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false
+                    }
             }]
         });
         //

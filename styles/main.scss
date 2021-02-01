@@ -79,6 +79,13 @@ header {
     color: $thirdColor;
     margin: 0;
     font-size: 60px;
+    @media screen and (max-width: 1250px) {
+      font-size: 40px;
+      padding-top: 45px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 28px;
+    }
   }
   &__grid {
     width: 1200px;
@@ -284,7 +291,7 @@ header {
   height: 320px;
   background: url("../img/dish_bg.jpg");
   @media screen and (max-width: 1440px) {
-    background: url("../img/dish_bg(1440).jpg") no-repeat;
+    //background: url("../img/dish_bg(1440).jpg") no-repeat;
     height: 290px;
   }
   article {
@@ -303,7 +310,7 @@ header {
   }
   h2 {
     font-size: 36px;
-    color: $firstColor;
+    color: $thirdColor;
     text-align: center;
     font-weight: 400;
     text-decoration: underline;
@@ -336,6 +343,9 @@ header {
   height: 1460px;
   @media screen and (max-width: 1250px) {
     height: 2400px;
+  }
+  @media screen and (max-width: 600px) {
+    height: 3100px;
   }
   article {
     text-align: center;
@@ -379,22 +389,33 @@ header {
         font-size: 14px;
       }
     }
-    div {
+    &__item {
       padding: 10px;
       cursor: pointer;
+      &:hover {
+      box-shadow: 0 0 18px 2px $secColor;
+    }
+      @media screen and (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
       > img {
         @media screen and (max-width: 600px) {
-          height: 150px;
+          height: 180px;
         }
       }
     }
-    > div:hover {
-      box-shadow: 0 0 18px 2px $secColor;
-    }
-    div div {
+    &__item div {
       display: flex;
       align-items: center;
       justify-content: space-around;
+      img {
+      @media screen and (max-width: 600px) {
+        margin: 0 5px;
+      }
+    }
     }
   }
   &__btn {
@@ -421,6 +442,12 @@ header {
     color: $thirdColor;
     margin: 0;
     font-size: 60px;
+    @media screen and (max-width: 1250px) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 28px;
+    }
   }
   &__slick {
     width: 90%;
@@ -433,6 +460,9 @@ header {
     }
     p {
       font-size: 20px;
+      @media screen and (max-width: 600px) {
+        font-size: 14px;
+      }
     }
     p:nth-child(1) {
       color: $thirdColor;
@@ -444,12 +474,22 @@ header {
 }
 .shop {
   height: 600px;
+  @media screen and (max-width: 1000px) {
+    height: 1150px;
+  }
   article {
     text-align: center;
     padding-top: 85px;
     color: $firstColor;
     margin: 0;
     font-size: 60px;
+    @media screen and (max-width: 1250px) {
+      font-size: 40px;
+      padding-top: 45px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 28px;
+    }
   }
   &__grid {
     margin: 65px auto;
@@ -457,6 +497,12 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 80px;
+    @media screen and (max-width: 1000px) {
+      width: 240px;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin: 30px auto;
+    }
     div {
       @include flexCentrCentr;
       flex-direction: column;
@@ -468,6 +514,10 @@ header {
       text-align: center;
       cursor: pointer;
       margin-top: 50px;
+      @media screen and (max-width: 1000px) {
+        margin-top: 30px;
+        font-size: 18px;
+      }
     }
     a:hover {
       color: $secColor;
@@ -483,6 +533,9 @@ footer {
     color: $thirdColor;
     margin: 0;
     font-size: 40px;
+    @media screen and (max-width: 750px) {
+      font-size: 22px;
+    }
   }
   form {
     margin: 40px auto;
@@ -493,6 +546,9 @@ footer {
     align-items: center;
     justify-content: center;
     background: $thirdColor;
+    @media screen and (max-width: 750px) {
+      width: 300px;
+    }
     input {
       width: 280px;
       height: 60px;
@@ -500,6 +556,10 @@ footer {
       border-radius: 30px;
       padding: 0 0 0 20px;
       outline: none;
+      @media screen and (max-width: 750px) {
+        width: 170px;
+        font-size: 12px;
+      }
       &::placeholder {
         color: $firstColor;
         font-weight: 400;
@@ -513,6 +573,10 @@ footer {
       border-radius: 30px;
       @include flexCentrCentr;
       cursor: pointer;
+      @media screen and (max-width: 750px) {
+        width: 110px;
+        font-size: 12px;
+      }
     }
   }
   p {
@@ -522,8 +586,8 @@ footer {
     color: $thirdColor;
     padding-top: 30px;
     margin: 0;
-    @media screen and (max-width: 500px) {
-      font-size: 18px;
+    @media screen and (max-width: 750px) {
+      font-size: 12px;
     }
   }
   .social {
@@ -533,7 +597,7 @@ footer {
   svg {
     fill: $secColor;
     margin: 0 20px;
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 750px) {
       margin: 0 10px;
     }
   }
