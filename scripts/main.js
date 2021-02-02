@@ -1,21 +1,13 @@
 ;(function($){
     $(function (){
-        //Menu
-        $('#hamburger').click(function() {
-            var clicks = $(this).data('clicks');
-            if (clicks) {
-                $('#nav').css('display', 'none');
-            } else {
-                $('#nav').css({
-                    'display': 'flex',
-                    'flex-direction': 'column',
-                    'width': '95px',
-                    'align-items': 'start',
-                    'height': '300px',
-                    'margin' : '0 20px 0 0'
-                });
-            }
-            $(this).data("clicks", !clicks);
+        // Toggle mobile-menu
+        $('header label').on('click', function () {
+            $('nav').toggleClass('nav__list');
+        });
+        //Hide toggle-menu
+        $('nav a').on('click', function (){
+            $('nav').toggleClass('nav__list');
+            $('#hamburger').prop('checked', false);
         });
         //
         //Slick-slider
@@ -46,22 +38,11 @@
         //
         //smooth scrolling
         $("body").on('click', '[href*="#"]', function(e){
-            var fixed_offset = 100;
+            let fixed_offset = 100;
             $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
             e.preventDefault();
         });
         //
-        //Close modal by html click
-        $('html').mouseup(function (e) {
-            let container = $(".modal__news__video, .modal__contact, .modal__enter, .modal__bag");
-            if (container.has(e.target).length === 0){
-                container.hide();
-                $('.dark__background').hide();
-            }
-        });
-
-
-
     });
 })(jQuery);
 

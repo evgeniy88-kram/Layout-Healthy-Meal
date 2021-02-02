@@ -12,6 +12,11 @@ header {
   justify-content: space-around;
   height: 170px;
 }
+@media screen and (max-width: 1000px) {
+  header {
+    justify-content: space-between;
+  }
+}
 header h1 {
   font-weight: 300;
   font-size: 42px;
@@ -22,8 +27,23 @@ header h1 {
     font-size: 36px;
   }
 }
+@media screen and (max-width: 1000px) {
+  header h1 {
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  header h1 {
+    font-size: 28px;
+  }
+}
 header h1 span {
   color: #75B534;
+}
+@media screen and (max-width: 1000px) {
+  header nav {
+    display: none;
+  }
 }
 header nav a {
   text-decoration: none;
@@ -39,6 +59,74 @@ header nav a {
 }
 header nav a:hover {
   color: #75B534;
+}
+header .nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  height: 200px;
+  top: 120px;
+  left: 0;
+  background: #ffffff;
+  overflow: auto;
+  z-index: 4;
+}
+header #hamburger {
+  display: none;
+}
+header #hamburger + label {
+  display: none;
+  width: 42px;
+  height: 42px;
+}
+@media screen and (max-width: 1000px) {
+  header #hamburger + label {
+    display: flex;
+    margin-right: 30px;
+  }
+}
+header #hamburger + label span {
+  width: 30px;
+  height: 3px;
+  background: #1C1A2C;
+  display: block;
+  position: relative;
+  margin: auto;
+  transition: 0.5s;
+}
+header #hamburger + label span:before, header #hamburger + label span:after {
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  display: block;
+  background: #1C1A2C;
+}
+header #hamburger + label span:before {
+  top: -10px;
+}
+header #hamburger + label span:after {
+  bottom: -10px;
+}
+header #hamburger:checked + label span {
+  background: transparent;
+  transform: rotate(180deg);
+}
+header #hamburger:checked + label span:before, header #hamburger:checked + label span:after {
+  top: 50%;
+  bottom: initial;
+  width: 110%;
+  background: #75B534;
+}
+header #hamburger:checked + label span:before {
+  transform: rotate(45deg);
+}
+header #hamburger:checked + label span:after {
+  transform: rotate(-45deg);
 }
 
 .banner {

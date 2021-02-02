@@ -21,6 +21,9 @@ header {
   align-items: center;
   justify-content: space-around;
   height: 170px;
+  @media screen and (max-width: 1000px) {
+    justify-content: space-between;
+  }
   h1 {
     font-weight: 300;
     font-size: 42px;
@@ -28,11 +31,20 @@ header {
     @media screen and (max-width: 1500px) {
       font-size: 36px;
     }
+    @media screen and (max-width: 1000px) {
+      margin-left: 30px;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 28px;
+    }
     span {
       color: $secColor;
     }
   }
   nav {
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
     a {
       text-decoration: none;
       color: $firstColor;
@@ -45,6 +57,74 @@ header {
     }
     a:hover {
       color: $secColor;
+    }
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    height: 200px;
+    top: 120px;
+    left: 0;
+    background: $thirdColor;
+    overflow: auto;
+    z-index: 4;
+  }
+  #hamburger {
+    display: none;
+    & + label {
+      display: none;
+      width: 42px;
+      height: 42px;
+      @media screen and (max-width: 1000px) {
+        display: flex;
+        margin-right: 30px;
+      }
+      span {
+        width: 30px;
+        height: 3px;
+        background: $firstColor;
+        display: block;
+        position: relative;
+        margin: auto;
+        transition: .5s;
+        &:before, &:after {
+          transition: .5s;
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          display: block;
+          background: $firstColor;
+        }
+        &:before {
+          top: -10px;
+        }
+        &:after {
+          bottom: -10px;
+        }
+      }
+    }
+    &:checked + label {
+      span {
+        background: transparent;
+        transform: rotate(180deg);
+        &:before, &:after {
+          top: 50%;
+          bottom: initial;
+          width: 110%;
+          background: $secColor;
+        }
+        &:before {
+          transform: rotate(45deg);
+        }
+        &:after {
+          transform: rotate(-45deg);
+        }
+      }
     }
   }
 }
